@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.sql.*;
 
 public class Member{
     MemberState regularCustomer;
@@ -6,6 +7,9 @@ public class Member{
     MemberState bigDonor;
     int numOfDonations;
     MemberState state = regularCustomer;
+    String first;
+    String last;
+    int ID;
 
 
     String name;
@@ -25,6 +29,47 @@ public class Member{
             state = friendOf;
         }
 
+    }
+
+    public void loadMember(int id) {
+        try {
+
+            Connection conn = DriverManager.getConnection("Library");
+            Statement statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT First_Name, Last_Name, ID, Status From Customers Where ID =" + id);
+
+            if (rs.next()) { // there was a result
+                first = rs.getString("First_Name");
+                last = rs.getString("Last_Name");
+                ID = id;
+
+            }
+        }
+        catch (SQLException a) {
+            System.out.println(a);
+        }
+    }
+    public String getFirst() {
+        return first;
+    }
+
+    public void setFirst(String first) {
+        this.first = first;
+    }
+
+    public String getLast() {
+        return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
+    }
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public void CheckOut(Book book) {
