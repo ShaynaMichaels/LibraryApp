@@ -10,6 +10,7 @@ public class Member{
     String first;
     String last;
     int ID;
+    ArrayList<String> Availbooks;
 
 
     String name;
@@ -17,6 +18,7 @@ public class Member{
 
     public Member(String name, int numDonations){
         this.name=name;
+        this.Availbooks = Availbooks;
         regularCustomer = new RegularCustomerState(this);
         friendOf = new FriendOfLibraryState(this);
         bigDonor = new BigDonorState(this);
@@ -93,5 +95,14 @@ public class Member{
 
     public MemberState getState(){
         return state;
+    }
+
+    //see the available books. Wants to observe the available books so that when a new one becomes available members know they can check out a new book
+    public void update(ArrayList<String> books){
+        this.Availbooks = books;
+    }
+
+    public ArrayList<String> seeBooksAvailable(){
+        return this.Availbooks;
     }
 }
