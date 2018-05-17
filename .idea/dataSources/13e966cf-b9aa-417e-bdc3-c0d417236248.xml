@@ -19,55 +19,65 @@
       <Position>1</Position>
       <DataType>INT|0</DataType>
     </column>
-    <column id="11" parent="6" name="Borrowed_by">
+    <column id="11" parent="6" name="membID">
       <Position>2</Position>
       <DataType>INT|0</DataType>
     </column>
-    <column id="12" parent="7" name="Book">
+    <foreign-key id="12" parent="6">
+      <ColNames>Book_ID</ColNames>
+      <RefTableName>Books</RefTableName>
+      <RefColNames>Book_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="13" parent="6">
+      <ColNames>membID</ColNames>
+      <RefTableName>Members</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="14" parent="7" name="Book">
       <Position>1</Position>
       <DataType>VARCHAR(61)|0</DataType>
     </column>
-    <column id="13" parent="7" name="Author">
+    <column id="15" parent="7" name="Author">
       <Position>2</Position>
       <DataType>VARCHAR(36)|0</DataType>
     </column>
-    <column id="14" parent="7" name="Book_ID">
+    <column id="16" parent="7" name="Book_ID">
       <Position>3</Position>
       <DataType>VARCHAR(7)|0</DataType>
     </column>
-    <column id="15" parent="8" name="ID">
+    <column id="17" parent="8" name="ID">
       <Position>1</Position>
       <DataType>INT|0</DataType>
     </column>
-    <column id="16" parent="8" name="First_Name">
+    <column id="18" parent="8" name="First_Name">
       <Position>2</Position>
       <DataType>VARCHAR(8)|0</DataType>
     </column>
-    <column id="17" parent="8" name="Last_Name">
+    <column id="19" parent="8" name="Last_Name">
       <Position>3</Position>
       <DataType>VARCHAR(8)|0</DataType>
     </column>
-    <column id="18" parent="8" name="Status">
+    <column id="20" parent="8" name="Status">
       <Position>4</Position>
       <DataType>VARCHAR(10)|0</DataType>
     </column>
-    <column id="19" parent="9" name="type">
+    <column id="21" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="20" parent="9" name="name">
+    <column id="22" parent="9" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="21" parent="9" name="tbl_name">
+    <column id="23" parent="9" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="22" parent="9" name="rootpage">
+    <column id="24" parent="9" name="rootpage">
       <Position>4</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="23" parent="9" name="sql">
+    <column id="25" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0</DataType>
     </column>
