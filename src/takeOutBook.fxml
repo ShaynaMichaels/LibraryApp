@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TakeOutBook">
+   <children>
+      <Label layoutX="64.0" layoutY="83.0" prefHeight="27.0" prefWidth="296.0" text="Please enter a book to take out" />
+      <Label layoutX="54.0" layoutY="166.0" text="Your name" />
+      <Label layoutX="54.0" layoutY="212.0" text="Title" />
+      <Label layoutX="54.0" layoutY="256.0" text="Author" />
+      <TextField fx:id="txtMemberName" layoutX="149.0" layoutY="160.0" onAction="#txtMemberName" />
+      <TextField fx:id="txtBookTitle" layoutX="149.0" layoutY="206.0" onAction="#txtBookTitle" />
+      <TextField fx:id="txtBookAuthor" layoutX="149.0" layoutY="250.0" onAction="#txtBookAuthor" />
+   </children>
+</AnchorPane>
