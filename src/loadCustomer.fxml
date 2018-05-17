@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtFirstName" layoutX="54.0" layoutY="167.0" onAction="#enterFirstName" />
+      <TextField fx:id="txtLastName" layoutX="316.0" layoutY="167.0" onAction="#enterLastName" />
+      <Label layoutX="102.0" layoutY="111.0" text="First Name" />
+      <Label layoutX="386.0" layoutY="111.0" text="Last Name" />
+      <Label layoutX="192.0" layoutY="68.0" text="Please enter your name" />
+      <Label layoutX="20.0" layoutY="234.0" prefHeight="27.0" prefWidth="546.0" text="Please enter the number of  times you have donated to the Library" />
+      <TextField fx:id="txtNumDonations" layoutX="181.0" layoutY="275.0" onAction="#txtNumDonations" />
+   </children>
+</Pane>
