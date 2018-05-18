@@ -35,6 +35,7 @@ public class Main extends Application {
         member1.Renew(book1);
         member3.CheckOut(book1);
         member1.Return(book1);
+        member1.update(Book);
         member2.CheckOut(book1);
         member3.setState(FriendOfLibraryState);
     }
