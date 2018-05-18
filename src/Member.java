@@ -44,7 +44,6 @@ public class Member{
                 first = rs.getString("First_Name");
                 last = rs.getString("Last_Name");
                 ID = id;
-
             }
         }
         catch (SQLException a) {

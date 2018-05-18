@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.lang.reflect.Member;
+
 public class Main extends Application {
 
     @Override
@@ -19,5 +21,14 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        Member member = new Member();
+        member.loadMember(5);
+        Book book1 = new Book();
+        Book book2 = new Book();
+
+        member.CheckOut(book1);
+        member.Renew(book1);
+        member.Return(book1);
+        
     }
 }
